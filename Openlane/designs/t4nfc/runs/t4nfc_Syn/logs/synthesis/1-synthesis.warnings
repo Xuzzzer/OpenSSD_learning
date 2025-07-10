@@ -1,0 +1,18 @@
+/openlane/designs/t4nfc/src/LFSR8.v:73: Warning: Identifier `\wFeedback' is implicitly declared.
+Warning: Resizing cell port DispScratchpad.u_tdpram.web from 1 bits to 4 bits.
+Warning: Resizing cell port DispScratchpad.u_tdpram.wea from 1 bits to 4 bits.
+Warning: Resizing cell port $paramod$985e5f173e2167e0e0d7cfc1eccbce790f284f18\CompletionDataChannel.Inst_ForwardedDataQ.oPopData from 21 bits to 64 bits.
+Warning: Resizing cell port $paramod$985e5f173e2167e0e0d7cfc1eccbce790f284f18\CompletionDataChannel.Inst_ForwardedDataQ.iPushData from 21 bits to 64 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleDecoder.genblk1[3].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleDecoder.genblk1[2].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleDecoder.genblk1[1].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleDecoder.genblk1[0].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleEncoder.genblk1[3].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleEncoder.genblk1[2].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleEncoder.genblk1[1].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod$c10496e59932745ba490e23291b2197a5d4f15d4\ScrambleEncoder.genblk1[0].Inst_LFSR.iSeed from 34 bits to 8 bits.
+Warning: Resizing cell port $paramod\DispRequestDispatcher\NumberOfWays=s32'00000000000000000000000000001000.Inst_RegExt.iNANDReadyBusy from 8 bits to 1 bits.
+Warning: Resizing cell port FMCTop.Inst_Dispatcher.oLLNFCAddress from 32 bits to 40 bits.
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The choice nodes in the original AIG are removed by strashing.
+Warnings: 15 unique messages, 15 total

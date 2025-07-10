@@ -1,0 +1,25 @@
+
+91. Printing statistics.
+
+=== FMCTop ===
+
+   Number of wires:             118847
+   Number of wire bits:         159784
+   Number of public wires:        1377
+   Number of public wire bits:   41280
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             155669
+     $_ANDNOT_                    4053
+     $_AND_                        413
+     $_MUX_                     107998
+     $_NAND_                       383
+     $_NOR_                        552
+     $_NOT_                        175
+     $_ORNOT_                      327
+     $_OR_                        3129
+     $_XNOR_                       176
+     $_XOR_                       1035
+     sky130_fd_sc_hd__dfxtp_2    37428
+

@@ -1,0 +1,31 @@
+
+85. Printing statistics.
+
+=== FMCTop ===
+
+   Number of wires:              79678
+   Number of wire bits:         120615
+   Number of public wires:        1377
+   Number of public wire bits:   41280
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             116500
+     $_ANDNOT_                    4053
+     $_AND_                        413
+     $_DFFE_PP_                  35136
+     $_DFF_P_                      144
+     $_MUX_                      68829
+     $_NAND_                       383
+     $_NOR_                        552
+     $_NOT_                        175
+     $_ORNOT_                      327
+     $_OR_                        3129
+     $_SDFFE_PP0N_                 226
+     $_SDFFE_PP0P_                1561
+     $_SDFFE_PP1P_                  98
+     $_SDFF_PP0_                   167
+     $_SDFF_PP1_                    96
+     $_XNOR_                       176
+     $_XOR_                       1035
+
