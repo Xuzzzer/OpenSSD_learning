@@ -1,0 +1,16 @@
+/openlane/designs/CRC_checker/src/BCHDecoderOutputControl.v:515: Warning: Identifier `\wErrCntWriteValid' is implicitly declared.
+/openlane/designs/CRC_checker/src/BCHDecoderOutputControl.v:516: Warning: Identifier `\wErrCntWriteLast' is implicitly declared.
+Warning: Replacing memory \fifo_mem with list of registers. See /openlane/designs/CRC_checker/src/FIFO_sync.v:45
+Warning: Replacing memory \fifo_mem with list of registers. See /openlane/designs/CRC_checker/src/FIFO_sync.v:45
+Warning: Resizing cell port SCFIFO_128x64_withCount.u_fifo_sync.data_count from 6 bits to 7 bits.
+Warning: Resizing cell port $paramod$1409daf4c323c2c76234392c03a60eda0c990eb1\BCHDecoderCommandReception.Inst_JobQueue.oPopData from 66 bits to 128 bits.
+Warning: Resizing cell port $paramod$1409daf4c323c2c76234392c03a60eda0c990eb1\BCHDecoderCommandReception.Inst_JobQueue.iPushData from 66 bits to 128 bits.
+Warning: Resizing cell port $paramod$cf523932ec0edcc0b4a0b0dd6424d5e80bb0be62\BCHEncoderDataChannel.DataBuffer.oPopData from 33 bits to 64 bits.
+Warning: Resizing cell port $paramod$cf523932ec0edcc0b4a0b0dd6424d5e80bb0be62\BCHEncoderDataChannel.DataBuffer.iPushData from 33 bits to 64 bits.
+Warning: Resizing cell port $paramod$1409daf4c323c2c76234392c03a60eda0c990eb1\BCHEncoderControl.DataBuffer.oPopData from 18 bits to 64 bits.
+Warning: Resizing cell port $paramod$1409daf4c323c2c76234392c03a60eda0c990eb1\BCHEncoderControl.DataBuffer.iPushData from 18 bits to 64 bits.
+Warning: Resizing cell port $paramod$1cb8d7373fe59e4712e0ad0b849b7c2e99be5ad5\BCHDecoderControl.Inst_DataQueue.oPopData from 33 bits to 64 bits.
+Warning: Resizing cell port $paramod$1cb8d7373fe59e4712e0ad0b849b7c2e99be5ad5\BCHDecoderControl.Inst_DataQueue.iPushData from 33 bits to 64 bits.
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The choice nodes in the original AIG are removed by strashing.
+Warnings: 12 unique messages, 13 total
