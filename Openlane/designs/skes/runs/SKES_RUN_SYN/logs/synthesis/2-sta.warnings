@@ -1,4 +1,0 @@
-Warning: skes_bch.sdc line 14, set_input_delay relative to a clock defined on the same port/pin not allowed.
-Warning: skes_bch.sdc line 15, set_input_delay relative to a clock defined on the same port/pin not allowed.
-Warning: There are 40 unconstrained endpoints.
-[WARNING] Did not save OpenROAD database!

@@ -472,7 +472,7 @@ module FMCTop
         .oReadValid         (wDRChCmpt2DMARValid    ),
         .iReadReady         (wDRChCmpt2DMARReady    )
     );
-    
+   
     Completion
     #
     (
@@ -591,6 +591,10 @@ module FMCTop
         .iDstReadLast       (iToECCRLast                ),
         .oDstReadReady      (oToECCRReady               )
     );
+       wire [39:0] tmp_wDWChPCGAddress;
+    assign tmp_wDWChPCGAddress[31:0]=wDWChPCGAddress;
+    
+  
     
     DispRequestDispatcher
     #
@@ -634,7 +638,7 @@ module FMCTop
         .oLLNFCOpcode       (wDWChPCGOpcode             ),
         .oLLNFCTargetID     (wDWChPCGTargetID           ),
         .oLLNFCSourceID     (wDWChPCGSourceID           ),
-        .oLLNFCAddress      (wDWChPCGAddress            ),
+        .oLLNFCAddress      (tmp_wDWChPCGAddress            ),//!!
         .oLLNFCLength       (wDWChPCGLength             ),
         .oLLNFCCmdValid     (wDWChPCGCmdValid           ),
         .iLLNFCCmdReady     (wDWChPCGCmdReady           ),

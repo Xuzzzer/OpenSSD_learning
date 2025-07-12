@@ -237,14 +237,14 @@ module ScrambleEncoder
         for (i = 0; i < DataWidth / 8; i = i + 1)
         begin
             assign wIndex[IndexWidth * (i + 1) - 1:IndexWidth * i] = {(IndexWidth){1'b1}} & i;
-        
+            wire [IndexWidth-1:0] cur_index = wIndex[IndexWidth * (i + 1) - 1:IndexWidth * i];
+            wire [17:0] seed_concat = {rRowAddress, cur_index};
             LFSR8
             Inst_LFSR
             (
                 .iClock         (iClock                                         ),
                 .iReset         (iReset                                         ),
-                .iSeed          ({rRowAddress,
-                                wIndex[IndexWidth * (i + 1) - 1:IndexWidth * i]}),
+                .iSeed          (seed_concat[7:0]),
                 .iSeedEnable    (rCurState == State_EncTrfCmd                   ),
                 .iShiftEnable   ((rCurState == State_EncTrf) &&
                                     iDstReadValid && iSrcReadReady              ),

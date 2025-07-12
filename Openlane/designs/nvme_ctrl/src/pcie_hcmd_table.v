@@ -108,7 +108,25 @@ generate
 	end
 endgenerate
 
-
+RTL_Simple_Dual_Port_RAM
+#(
+    .ADDR_A_WIDTH 
+    .ADDR_B_WIDTH
+    .WRITE_DATA_WIDTH_A(LP_WRITE_WIDTH)
+    .READ_DATA_WIDTH_B(LP_READ_WIDTH) 
+    .MEM_DEPTH
+)ramb36sdp_0 (
+    .wr_clk   (wr_clk),
+	.rd_clk   (rd_clk),
+//write
+    .ena    (wr_en),
+    .addra   (wraddr),
+    .dina  (wr_data[LP_WRITE_WIDTH-1:0]),
+//read
+    .enb   (1'b1),
+    .addrb   (rdaddr),
+    .dinb  (w_rd_data[LP_READ_WIDTH-1:0])
+);
 BRAM_SDP_MACRO #(
 	.DEVICE									(LP_DEVICE),
 	.BRAM_SIZE								(LP_BRAM_SIZE),

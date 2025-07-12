@@ -123,19 +123,22 @@ module BCHEncoderControl
     wire    [1:0]                       wOpQOpType      ;
     
     wire    wOpQPopSignal   ;
+    wire [63:0] oPopData_tmp;
     SCFIFO_64x64_withCount
     DataBuffer
     (
         .iClock         (iClock                         ),
         .iReset         (iReset                         ),
-        .iPushData      (wOpQPushData                   ),
+        .iPushData      ({46'b0,wOpQPushData }           ),
         .iPushEnable    (wOpQPushSignal                 ),
         .oIsFull        (wOpQIsFull                     ),
-        .oPopData       (wOpQPopData                    ),
+        .oPopData       (oPopData_tmp                   ),
         .iPopEnable     (wOpQPopSignal                  ),
         .oIsEmpty       (wOpQIsEmpty                    ),
         .oDataCount     (                               )
     );
+    assign wOpQPopData = oPopData_tmp[InnerIFLengthWidth+2-1:0];
+    
     AutoFIFOPopControl
     DataBufferControl
     (

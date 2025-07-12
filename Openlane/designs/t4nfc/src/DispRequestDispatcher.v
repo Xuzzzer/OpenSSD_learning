@@ -368,7 +368,7 @@ module DispRequestDispatcher
         .iDPLWCDataHandshake    (oDPLWriteValid & iDPLWriteReady        ),
         .iDPLRCCmdReady         (iDPLRCmdReady                          ),
         .iDPLRCDataHandshake    (iDPLReadValid & oDPLReadReady          ),
-        .iNANDReadyBusy         (iBPWaysReadybusy                       )
+        .iNANDReadyBusy         (iBPWaysReadybusy[0]                       )
     );
     
     DispRegCoreAcc

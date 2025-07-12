@@ -456,20 +456,23 @@ module BCHEncoderDataChannel
 		.oConvertedData         (wUpConvertedData),
 		.iDstReady              (wReadReady)
 	);
-    
+    wire [63:0] oPopData_tmp;
+    assign {oSrcReadData, oSrcReadLast}=oPopData_tmp[DataWidth:0];
     SCFIFO_64x64_withCount
     DataBuffer
     (
         .iClock         (iClock                         ),
         .iReset         (iReset                         ),
-        .iPushData      ({rReadData, rReadLast}         ),
+        .iPushData      ({31'b0,rReadData, rReadLast}         ),
         .iPushEnable    (rReadValid && wReadReady       ),
         .oIsFull        (wReadFull                      ),
-        .oPopData       ({oSrcReadData, oSrcReadLast}   ),
+        .oPopData       ( oPopData_tmp  ),
         .iPopEnable     (wDataBufferPopSignal           ),
         .oIsEmpty       (wReadEmpty                     ),
         .oDataCount     (                               )
     );
+
+
     AutoFIFOPopControl
     DataBufferControl
     (

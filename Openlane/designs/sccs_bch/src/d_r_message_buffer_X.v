@@ -131,7 +131,7 @@ module	d_r_message_buffer_X
     localparam FULL_ADDR_WIDTH = AddressWidth + 3;
     localparam MEM_SIZE        = 2**FULL_ADDR_WIDTH;
 
-     RTL_Simple_Dual_Port_RAM
+    RTL_Simple_Dual_Port_RAM
     #(
         .ADDR_WIDTH (FULL_ADDR_WIDTH),
         .DATA_WIDTH (DataWidth),

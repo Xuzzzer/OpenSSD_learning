@@ -4,7 +4,7 @@
     "VERILOG_FILES": [
         "dir::src/*.v"    ],
     "CLOCK_PERIOD": 10,
-    "CLOCK_PORT": "i_clk",
+    "CLOCK_PORT": "iClock",
     "PNR_SDC_FILE": "dir::src/CRC_checker.sdc",
     "SIGNOFF_SDC_FILE": "dir::src/CRC_checker.sdc",
     "SYNTH_STRATEGY": "AREA 2",
@@ -25,7 +25,10 @@
     ],
     "//": "Technology-Specific Configs",
     "pdk::sky130*": {
-        "FP_CORE_UTIL": 45,
+        "FP_CORE_UTIL": 30,
+        "PL_TARGET_DENSITY": 0.4,
+        "PL_ROUTING_OPTIMIZATION": 1,
+        "ROUTING_CORES":32, 
         "CLOCK_PERIOD": 10,
         "scl::sky130_fd_sc_hs": {
             "CLOCK_PERIOD": 8

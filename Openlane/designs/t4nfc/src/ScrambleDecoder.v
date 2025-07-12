@@ -234,24 +234,23 @@ module ScrambleDecoder
     wire    [IndexWidth * (DataWidth / 8) - 1:0] wIndex;
     
     generate
-        for (i = 0; i < DataWidth / 8; i = i + 1)
-        begin
-            assign wIndex[IndexWidth * (i + 1) - 1:IndexWidth * i] = {(IndexWidth){1'b1}} & i;
-        
-            LFSR8
-            Inst_LFSR
-            (
-                .iClock         (iClock                                         ),
-                .iReset         (iReset                                         ),
-                .iSeed          ({rRowAddress,
-                                wIndex[IndexWidth * (i + 1) - 1:IndexWidth * i]}),
-                .iSeedEnable    (rCurState == State_EncTrfCmd                   ),
-                .iShiftEnable   ((rCurState == State_EncTrf) &&
-                                    iSrcWriteValid && iDstWriteReady            ),
-                .oData          (wLFSROut[8 * (i + 1) - 1:8 * i]                )
-            );
-        end
+    for (i = 0; i < DataWidth / 8; i = i + 1)
+    begin : GEN_LFSR
+        wire [IndexWidth-1:0] wIdx = i[IndexWidth-1:0];
+        wire [AddressWidth + IndexWidth - 1:0] seed_concat = {rRowAddress, wIdx};
+
+        LFSR8 Inst_LFSR (
+            .iClock         (iClock),
+            .iReset         (iReset),
+            .iSeed          (seed_concat[7:0]),
+            .iSeedEnable    (rCurState == State_EncTrfCmd),
+            .iShiftEnable   ((rCurState == State_EncTrf) &&
+                             iSrcWriteValid && iDstWriteReady),
+            .oData          (wLFSROut[8 * (i + 1) - 1:8 * i])
+        );
+    end
     endgenerate
+
     
     assign oDstWriteValid   = iSrcWriteValid && ((rCurState == State_EncTrf) || (rCurState == State_BypassTrf));
     assign oDstWriteLast    = iSrcWriteLast;

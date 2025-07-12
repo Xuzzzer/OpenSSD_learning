@@ -7,7 +7,6 @@
     "CLOCK_PORT": "iClock",
     "PNR_SDC_FILE": "dir::src/FMCTop.sdc",
     "SIGNOFF_SDC_FILE": "dir::src/FMCTop.sdc",
-    "SYNTH_STRATEGY": "AREA 2",
     "RUN_LINTER":0,
     "//": "PDN",
     "FP_PDN_VOFFSET": 5,
@@ -25,8 +24,11 @@
     ],
     "//": "Technology-Specific Configs",
     "pdk::sky130*": {
-        "FP_CORE_UTIL": 45,
+        "FP_CORE_UTIL": 30,
         "CLOCK_PERIOD": 10,
+        "GLB_RESIZER_TIMING_OPTIMIZATIONS": 1,
+        "PL_ROUTING_OPTIMIZATION": 1,
+        "ROUTING_CORES": 32, 
         "scl::sky130_fd_sc_hs": {
             "CLOCK_PERIOD": 8
         },

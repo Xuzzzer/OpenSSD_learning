@@ -364,19 +364,20 @@ module BCHDecoderControl
         .oValid         (oDstWriteValid     ),
         .iReady         (iDstWriteReady     )
     );
-
+    wire [63:0] oPopData_tmp;
     SCFIFO_64x64_withCount
     Inst_DataQueue
     (
         .iClock         (iClock                                             ),
         .iReset         (iReset                                             ),
-        .iPushData      ({wBufferedWriteData, wBufferedWriteLast}           ),
+        .iPushData      ({31'b0,wBufferedWriteData, wBufferedWriteLast}           ),
         .iPushEnable    (wDataQueuePushSignal                               ),
         .oIsFull        (wDataQueueFull                                     ),
-        .oPopData       ({oDstWriteData, oDstWriteLast}                     ),
+        .oPopData       (oPopData_tmp                     ),
         .iPopEnable     (wDataQueuePopSignal                                ),
         .oIsEmpty       (wDataQueueEmpty                                    ),
         .oDataCount     (                                                   )
     );
+    assign oPopData_tmp[DataWidth:0] = {oDstWriteData, oDstWriteLast};
     
 endmodule

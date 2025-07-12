@@ -5,8 +5,8 @@ module tdpram_32x1024 (
     input  wire         rst_b,
     input  wire         en_a,
     input  wire         en_b,
-    input  wire [3:0]   wea,       // byte write enable (not used here, assume all 4 bits = 1 if write)
-    input  wire [3:0]   web,
+    input  wire         wea,       // byte write enable (not used here, assume all 4 bits = 1 if write)
+    input  wire         web,
     input  wire [9:0]   addra,
     input  wire [9:0]   addrb,
     input  wire [31:0]  dina,

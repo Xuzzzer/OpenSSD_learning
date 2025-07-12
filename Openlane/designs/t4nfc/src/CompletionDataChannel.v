@@ -150,20 +150,22 @@ module CompletionDataChannel
         endcase
     
     assign wFLenQDReady = (rDataChCurState == State_Idle);
+    wire [63:0] oPopData_tmp;
     
     SCFIFO_64x64_withCount
     Inst_ForwardedDataQ
     (
         .iClock         (iClock                     ),
         .iReset         (iReset                     ),
-        .iPushData      ({iSrcLength, iSrcTargetID} ),
+        .iPushData      ({43'b0,iSrcLength, iSrcTargetID} ),
         .iPushEnable    (wFLenQPushSig              ),
         .oIsFull        (wIsFLenQFull               ),
-        .oPopData       ({wFLenLength, wFTargetID}  ),
+        .oPopData       (oPopData_tmp ),
         .iPopEnable     (wFLenQPopSig               ),
         .oIsEmpty       (wIsFLenQEmpty              ),
         .oDataCount     (                           )
     );
+    assign {wFLenLength, wFTargetID} = oPopData_tmp[20:0];
     
     AutoFIFOPopControl
     Inst_ForwardedDataQPopControl

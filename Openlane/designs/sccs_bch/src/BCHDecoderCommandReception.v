@@ -186,32 +186,41 @@ module BCHDecoderCommandReception
         .iReady     (iQueuedCmdReady    )
     );
 
+    localparam TotalWidth = AddressWidth + InnerIFLengthWidth + 6 + 5 + 5 + 2; // =66
+
+    wire [127:0] wPushData;
+    wire [127:0] wPopData;
+
+    assign wPushData = {
+        {(128 - TotalWidth){1'b0}},     // 前缀补零 62 位
+        rCmdAddress,
+        rCmdLength,
+        rCmdOpcode,
+        rCmdSourceID,
+        rCmdTargetID,
+        rCmdType
+    };
+    assign {
+        oQueuedCmdAddress,     // AddressWidth
+        oQueuedCmdLength,      // InnerIFLengthWidth
+        oQueuedCmdOpcode,      // 6
+        oQueuedCmdSourceID,    // 5
+        oQueuedCmdTargetID,    // 5
+        oQueuedCmdType         // 2
+    } = wPopData[TotalWidth-1:0]; 
+
     SCFIFO_128x64_withCount
     Inst_JobQueue
     (
         .iClock         (iClock                                             ),
         .iReset         (iReset                                             ),
         .iPushData      (
-                            {
-                                rCmdAddress,
-                                rCmdLength,
-                                rCmdOpcode,
-                                rCmdSourceID,
-                                rCmdTargetID,
-                                rCmdType
-                            }
+                           wPushData
                         ),
         .iPushEnable    (wJobQueuePushSignal                                ),
         .oIsFull        (wJobQueueFull                                      ),
         .oPopData       (
-                            {
-                                oQueuedCmdAddress,
-                                oQueuedCmdLength,
-                                oQueuedCmdOpcode,
-                                oQueuedCmdSourceID,
-                                oQueuedCmdTargetID,
-                                oQueuedCmdType
-                            } 
+                           wPopData
                         ),
         .iPopEnable     (wJobQueuePopSignal                                 ),
         .oIsEmpty       (wJobQueueEmpty                                     ),

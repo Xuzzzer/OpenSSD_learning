@@ -200,6 +200,8 @@ module BCHDecoderOutputControl
     
     reg     [ChunkIterationBits - 1:0]  rCurLoopCount       ;
     reg     [ChunkIterationBits - 1:0]  rGoalLoopCount      ;
+    wire         wErrCntWriteValid;
+    wire         wErrCntWriteLast;
     
     localparam   ECCCtrlCmdType_Bypass       =   2'b00           ;
     localparam   ECCCtrlCmdType_PageDecode   =   2'b01           ;
