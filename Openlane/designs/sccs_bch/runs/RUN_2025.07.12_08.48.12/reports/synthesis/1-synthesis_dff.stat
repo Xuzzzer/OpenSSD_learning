@@ -1,0 +1,27 @@
+
+89. Printing statistics.
+
+=== BCHSCCS ===
+
+   Number of wires:             123258
+   Number of wire bits:         181252
+   Number of public wires:        2813
+   Number of public wire bits:   59295
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             167954
+     $_ANDNOT_                    6902
+     $_AND_                        282
+     $_MUX_                      89457
+     $_NAND_                       402
+     $_NOR_                        379
+     $_NOT_                        864
+     $_ORNOT_                      790
+     $_OR_                        4388
+     $_XNOR_                      2000
+     $_XOR_                      16880
+     sky130_fd_sc_hd__dfrtp_2      498
+     sky130_fd_sc_hd__dfstp_2        5
+     sky130_fd_sc_hd__dfxtp_2    45107
+

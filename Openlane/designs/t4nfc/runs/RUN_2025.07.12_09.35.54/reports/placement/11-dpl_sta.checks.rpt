@@ -1,0 +1,476 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: iClock (clock source 'iClock')
+Endpoint: oROMClock (output port clocked by iClock)
+Path Group: iClock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.10    0.00    0.00   clock iClock (rise edge)
+ 37429   70.13  561.91  415.00  415.00 ^ iClock (in)
+                                         iClock (net)
+                561.91    0.00  415.00 ^ _396404_/A (sky130_fd_sc_hd__buf_2)
+     1    0.00   11.49   36.69  451.69 ^ _396404_/X (sky130_fd_sc_hd__buf_2)
+                                         net567 (net)
+                 11.49    0.00  451.69 ^ output567/A (sky130_fd_sc_hd__buf_1)
+     1    0.05    0.63    0.74  452.42 ^ output567/X (sky130_fd_sc_hd__buf_1)
+                                         oROMClock (net)
+                  0.63    0.00  452.42 ^ oROMClock (out)
+                                452.42   data arrival time
+
+                  0.10   10.00   10.00   clock iClock (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.10    9.90   clock uncertainty
+                          0.00    9.90   clock reconvergence pessimism
+                         -0.50    9.40   output external delay
+                                  9.40   data required time
+-----------------------------------------------------------------------------
+                                  9.40   data required time
+                               -452.42   data arrival time
+-----------------------------------------------------------------------------
+                               -443.02   slack (VIOLATED)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+Startpoint: iClock (clock source 'iClock')
+Endpoint: oROMClock (output port clocked by iClock)
+Path Group: iClock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.10    0.00    0.00   clock iClock (rise edge)
+ 37429   70.13  561.91  415.00  415.00 ^ iClock (in)
+                                         iClock (net)
+                561.91    0.00  415.00 ^ _396404_/A (sky130_fd_sc_hd__buf_2)
+     1    0.00   11.49   36.69  451.69 ^ _396404_/X (sky130_fd_sc_hd__buf_2)
+                                         net567 (net)
+                 11.49    0.00  451.69 ^ output567/A (sky130_fd_sc_hd__buf_1)
+     1    0.05    0.63    0.74  452.42 ^ output567/X (sky130_fd_sc_hd__buf_1)
+                                         oROMClock (net)
+                  0.63    0.00  452.42 ^ oROMClock (out)
+                                452.42   data arrival time
+
+                  0.10   10.00   10.00   clock iClock (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.10    9.90   clock uncertainty
+                          0.00    9.90   clock reconvergence pessimism
+                         -0.50    9.40   output external delay
+                                  9.40   data required time
+-----------------------------------------------------------------------------
+                                  9.40   data required time
+                               -452.42   data arrival time
+-----------------------------------------------------------------------------
+                               -443.02   slack (VIOLATED)
+
+
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+_261303_/S                              0.50    0.74   -0.24 (VIOLATED)
+_234388_/B1                             0.50    0.70   -0.20 (VIOLATED)
+_204457_/B1                             0.50    0.66   -0.16 (VIOLATED)
+_198722_/B1                             0.50    0.66   -0.16 (VIOLATED)
+_221135_/B1                             0.50    0.66   -0.16 (VIOLATED)
+_218354_/B1                             0.50    0.66   -0.16 (VIOLATED)
+_209996_/B1                             0.50    0.64   -0.14 (VIOLATED)
+_192254_/B1                             0.50    0.63   -0.13 (VIOLATED)
+_192895_/A1                             0.50    0.63   -0.13 (VIOLATED)
+_236266_/A                              0.50    0.63   -0.13 (VIOLATED)
+_246855_/B1                             0.50    0.63   -0.13 (VIOLATED)
+_269144_/C1                             0.50    0.62   -0.12 (VIOLATED)
+_309953_/A0                             0.50    0.60   -0.10 (VIOLATED)
+wire17619/A                             0.50    0.58   -0.08 (VIOLATED)
+_238908_/A2_N                           0.50    0.58   -0.08 (VIOLATED)
+_257439_/B2                             0.50    0.58   -0.08 (VIOLATED)
+_285387_/A                              0.50    0.58   -0.08 (VIOLATED)
+_266693_/A1                             0.50    0.57   -0.07 (VIOLATED)
+_203438_/A1                             0.50    0.57   -0.07 (VIOLATED)
+_253179_/B                              0.50    0.57   -0.07 (VIOLATED)
+_236609_/B                              0.50    0.57   -0.07 (VIOLATED)
+_245495_/A                              0.50    0.57   -0.07 (VIOLATED)
+load_slew5996/A                         0.50    0.56   -0.06 (VIOLATED)
+_192239_/A1                             0.50    0.56   -0.06 (VIOLATED)
+_203422_/A1                             0.50    0.56   -0.06 (VIOLATED)
+_209985_/A1                             0.50    0.56   -0.06 (VIOLATED)
+_256039_/A3                             0.50    0.56   -0.06 (VIOLATED)
+_237122_/A1                             0.50    0.56   -0.06 (VIOLATED)
+_251507_/B2                             0.50    0.55   -0.05 (VIOLATED)
+_246507_/A                              0.50    0.55   -0.05 (VIOLATED)
+load_slew21505/A                        0.50    0.55   -0.05 (VIOLATED)
+_237674_/C1                             0.50    0.55   -0.05 (VIOLATED)
+_268760_/S                              0.50    0.55   -0.05 (VIOLATED)
+_188849_/A                              0.50    0.55   -0.05 (VIOLATED)
+_256657_/A1                             0.50    0.55   -0.05 (VIOLATED)
+_252677_/C1                             0.50    0.55   -0.05 (VIOLATED)
+_241122_/A                              0.50    0.55   -0.05 (VIOLATED)
+_256842_/B1                             0.50    0.55   -0.05 (VIOLATED)
+_237784_/A1                             0.50    0.54   -0.04 (VIOLATED)
+wire17261/A                             0.50    0.54   -0.04 (VIOLATED)
+_255374_/S                              0.50    0.54   -0.04 (VIOLATED)
+_232361_/C1                             0.50    0.54   -0.04 (VIOLATED)
+_268982_/C1                             0.50    0.54   -0.04 (VIOLATED)
+_235464_/B1                             0.50    0.54   -0.04 (VIOLATED)
+_244254_/A                              0.50    0.54   -0.04 (VIOLATED)
+_232465_/C1                             0.50    0.54   -0.04 (VIOLATED)
+_254730_/A1                             0.50    0.54   -0.04 (VIOLATED)
+_262140_/S                              0.50    0.53   -0.03 (VIOLATED)
+_252399_/A1                             0.50    0.53   -0.03 (VIOLATED)
+_209969_/A1                             0.50    0.53   -0.03 (VIOLATED)
+_250448_/S                              0.50    0.53   -0.03 (VIOLATED)
+_262425_/A1                             0.50    0.53   -0.03 (VIOLATED)
+_237589_/A                              0.50    0.53   -0.03 (VIOLATED)
+_192208_/A1                             0.50    0.53   -0.03 (VIOLATED)
+_258095_/C1                             0.50    0.52   -0.02 (VIOLATED)
+_187148_/A1                             0.50    0.52   -0.02 (VIOLATED)
+_242247_/S                              0.50    0.52   -0.02 (VIOLATED)
+_266808_/A1                             0.50    0.52   -0.02 (VIOLATED)
+_259805_/C1                             0.50    0.52   -0.02 (VIOLATED)
+_181070_/A                              0.50    0.52   -0.02 (VIOLATED)
+_244655_/A1                             0.50    0.52   -0.02 (VIOLATED)
+_264987_/C1                             0.50    0.52   -0.02 (VIOLATED)
+_309817_/A0                             0.50    0.52   -0.02 (VIOLATED)
+_239505_/A                              0.50    0.51   -0.01 (VIOLATED)
+_253356_/A1                             0.50    0.51   -0.01 (VIOLATED)
+_257986_/B1                             0.50    0.51   -0.01 (VIOLATED)
+_245787_/C1                             0.50    0.51   -0.01 (VIOLATED)
+_241283_/C1                             0.50    0.51   -0.01 (VIOLATED)
+load_slew9526/A                         0.50    0.51   -0.01 (VIOLATED)
+load_slew15025/A                        0.50    0.51   -0.01 (VIOLATED)
+_259614_/C1                             0.50    0.50   -0.00 (VIOLATED)
+wire7277/A                              0.50    0.50   -0.00 (VIOLATED)
+_241595_/A1                             0.50    0.50   -0.00 (VIOLATED)
+_231122_/B1                             0.50    0.50   -0.00 (VIOLATED)
+_239099_/A1                             0.50    0.50   -0.00 (VIOLATED)
+_248510_/S                              0.50    0.50   -0.00 (VIOLATED)
+_259063_/A1                             0.50    0.50   -0.00 (VIOLATED)
+_263137_/S                              0.50    0.50   -0.00 (VIOLATED)
+
+
+max slew violations count Typical: 78
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 183 unannotated drivers.
+ C_ARADDR[16]
+ C_ARADDR[17]
+ C_ARADDR[18]
+ C_ARADDR[19]
+ C_ARADDR[20]
+ C_ARADDR[21]
+ C_ARADDR[22]
+ C_ARADDR[23]
+ C_ARADDR[24]
+ C_ARADDR[25]
+ C_ARADDR[26]
+ C_ARADDR[27]
+ C_ARADDR[28]
+ C_ARADDR[29]
+ C_ARADDR[30]
+ C_ARADDR[31]
+ C_ARPROT[0]
+ C_ARPROT[1]
+ C_ARPROT[2]
+ C_AWADDR[16]
+ C_AWADDR[17]
+ C_AWADDR[18]
+ C_AWADDR[19]
+ C_AWADDR[20]
+ C_AWADDR[21]
+ C_AWADDR[22]
+ C_AWADDR[23]
+ C_AWADDR[24]
+ C_AWADDR[25]
+ C_AWADDR[26]
+ C_AWADDR[27]
+ C_AWADDR[28]
+ C_AWADDR[29]
+ C_AWADDR[30]
+ C_AWADDR[31]
+ C_AWPROT[0]
+ C_AWPROT[1]
+ C_AWPROT[2]
+ C_WSTRB[0]
+ C_WSTRB[1]
+ C_WSTRB[2]
+ C_WSTRB[3]
+ D_BRESP[0]
+ D_BRESP[1]
+ D_RLAST
+ D_RRESP[0]
+ D_RRESP[1]
+ iClock
+ iReadLast
+ ifromECCROpcode[0]
+ ifromECCROpcode[1]
+ ifromECCROpcode[2]
+ ifromECCROpcode[3]
+ ifromECCROpcode[4]
+ ifromECCROpcode[5]
+ ifromECCRSourceID[0]
+ ifromECCRSourceID[1]
+ ifromECCRSourceID[2]
+ ifromECCRSourceID[3]
+ ifromECCRSourceID[4]
+ ifromECCRTargetID[0]
+ ifromECCRTargetID[1]
+ ifromECCRTargetID[2]
+ ifromECCRTargetID[3]
+ ifromECCRTargetID[4]
+ ifromECCWOpcode[0]
+ ifromECCWOpcode[1]
+ ifromECCWOpcode[2]
+ ifromECCWOpcode[3]
+ ifromECCWOpcode[4]
+ ifromECCWOpcode[5]
+ ifromECCWSourceID[0]
+ ifromECCWSourceID[1]
+ ifromECCWSourceID[2]
+ ifromECCWSourceID[3]
+ ifromECCWSourceID[4]
+ FMCTop_35626/HI
+ FMCTop_35627/HI
+ FMCTop_35628/HI
+ FMCTop_35629/HI
+ FMCTop_35630/HI
+ FMCTop_35631/HI
+ FMCTop_35632/HI
+ FMCTop_35633/HI
+ FMCTop_35634/HI
+ FMCTop_35635/HI
+ FMCTop_35636/HI
+ FMCTop_35637/HI
+ FMCTop_35638/HI
+ FMCTop_35639/HI
+ FMCTop_35640/HI
+ FMCTop_35641/HI
+ FMCTop_35642/HI
+ FMCTop_35643/HI
+ FMCTop_35644/HI
+ FMCTop_35645/HI
+ FMCTop_35646/HI
+ FMCTop_35647/HI
+ FMCTop_35648/HI
+ FMCTop_35649/HI
+ FMCTop_35650/HI
+ FMCTop_35651/HI
+ FMCTop_35652/HI
+ FMCTop_35653/HI
+ FMCTop_35654/HI
+ FMCTop_35655/HI
+ FMCTop_35656/HI
+ FMCTop_35657/HI
+ FMCTop_35658/HI
+ FMCTop_35659/HI
+ FMCTop_35660/HI
+ FMCTop_35661/HI
+ FMCTop_35662/HI
+ FMCTop_35663/HI
+ FMCTop_35664/HI
+ FMCTop_35665/HI
+ FMCTop_35666/HI
+ FMCTop_35667/HI
+ FMCTop_35668/HI
+ FMCTop_35669/HI
+ FMCTop_35670/HI
+ FMCTop_35671/HI
+ FMCTop_35672/HI
+ FMCTop_35673/HI
+ FMCTop_35674/HI
+ FMCTop_35675/HI
+ FMCTop_35676/HI
+ FMCTop_35677/HI
+ FMCTop_35678/HI
+ FMCTop_35679/HI
+ FMCTop_35680/HI
+ FMCTop_35681/HI
+ FMCTop_35682/HI
+ FMCTop_35683/HI
+ FMCTop_35684/HI
+ FMCTop_35685/HI
+ FMCTop_35686/HI
+ FMCTop_35687/HI
+ FMCTop_35688/HI
+ FMCTop_35689/HI
+ FMCTop_35690/HI
+ FMCTop_35691/HI
+ FMCTop_35692/HI
+ FMCTop_35693/HI
+ FMCTop_35694/HI
+ FMCTop_35695/HI
+ FMCTop_35696/HI
+ FMCTop_35697/HI
+ FMCTop_35698/HI
+ FMCTop_35699/HI
+ FMCTop_35700/HI
+ FMCTop_35701/HI
+ FMCTop_35702/HI
+ FMCTop_35703/HI
+ FMCTop_35704/HI
+ FMCTop_35705/HI
+ FMCTop_35706/HI
+ FMCTop_35707/HI
+ FMCTop_35708/HI
+ FMCTop_35709/HI
+ FMCTop_35710/HI
+ FMCTop_35711/HI
+ FMCTop_35712/HI
+ FMCTop_35713/HI
+ FMCTop_35714/HI
+ FMCTop_35715/HI
+ FMCTop_35716/HI
+ FMCTop_35717/HI
+ FMCTop_35718/HI
+ FMCTop_35719/LO
+ FMCTop_35720/LO
+ FMCTop_35721/LO
+ FMCTop_35722/LO
+ FMCTop_35723/LO
+ FMCTop_35724/LO
+ FMCTop_35725/LO
+ FMCTop_35726/LO
+ FMCTop_35727/LO
+ FMCTop_35728/LO
+ FMCTop_35729/LO
+ FMCTop_35730/LO
+ _396404_/X
+ output567/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 78
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 105 unconstrained endpoints.
+  C_BRESP[0]
+  C_BRESP[1]
+  C_RRESP[0]
+  C_RRESP[1]
+  D_ARBURST[0]
+  D_ARBURST[1]
+  D_ARCACHE[0]
+  D_ARCACHE[1]
+  D_ARCACHE[2]
+  D_ARCACHE[3]
+  D_ARPROT[0]
+  D_ARPROT[1]
+  D_ARPROT[2]
+  D_ARSIZE[0]
+  D_ARSIZE[1]
+  D_ARSIZE[2]
+  D_AWBURST[0]
+  D_AWBURST[1]
+  D_AWCACHE[0]
+  D_AWCACHE[1]
+  D_AWCACHE[2]
+  D_AWCACHE[3]
+  D_AWPROT[0]
+  D_AWPROT[1]
+  D_AWPROT[2]
+  D_AWSIZE[0]
+  D_AWSIZE[1]
+  D_AWSIZE[2]
+  D_BREADY
+  D_WSTRB[0]
+  D_WSTRB[1]
+  D_WSTRB[2]
+  D_WSTRB[3]
+  O_DEBUG[0]
+  O_DEBUG[10]
+  O_DEBUG[11]
+  O_DEBUG[12]
+  O_DEBUG[13]
+  O_DEBUG[14]
+  O_DEBUG[15]
+  O_DEBUG[16]
+  O_DEBUG[17]
+  O_DEBUG[18]
+  O_DEBUG[19]
+  O_DEBUG[1]
+  O_DEBUG[20]
+  O_DEBUG[21]
+  O_DEBUG[22]
+  O_DEBUG[23]
+  O_DEBUG[24]
+  O_DEBUG[25]
+  O_DEBUG[26]
+  O_DEBUG[27]
+  O_DEBUG[28]
+  O_DEBUG[29]
+  O_DEBUG[2]
+  O_DEBUG[30]
+  O_DEBUG[31]
+  O_DEBUG[3]
+  O_DEBUG[4]
+  O_DEBUG[5]
+  O_DEBUG[6]
+  O_DEBUG[7]
+  O_DEBUG[8]
+  O_DEBUG[9]
+  oROMEnable
+  oROMRW
+  oROMWData[0]
+  oROMWData[10]
+  oROMWData[11]
+  oROMWData[12]
+  oROMWData[13]
+  oROMWData[14]
+  oROMWData[15]
+  oROMWData[16]
+  oROMWData[17]
+  oROMWData[18]
+  oROMWData[19]
+  oROMWData[1]
+  oROMWData[20]
+  oROMWData[21]
+  oROMWData[22]
+  oROMWData[23]
+  oROMWData[24]
+  oROMWData[25]
+  oROMWData[26]
+  oROMWData[27]
+  oROMWData[28]
+  oROMWData[29]
+  oROMWData[2]
+  oROMWData[30]
+  oROMWData[31]
+  oROMWData[3]
+  oROMWData[4]
+  oROMWData[5]
+  oROMWData[6]
+  oROMWData[7]
+  oROMWData[8]
+  oROMWData[9]
+  oTargetID[3]
+  oTargetID[4]
+  oToECCRTargetID[3]
+  oToECCRTargetID[4]
+  oToECCWTargetID[3]
+  oToECCWTargetID[4]

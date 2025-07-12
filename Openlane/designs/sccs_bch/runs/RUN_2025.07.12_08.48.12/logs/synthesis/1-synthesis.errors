@@ -1,0 +1,53 @@
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+Parameter \MaxErrorCountBits = 9
+    29/29: $0\o_error_detected[0:0]
+     1/2: $0\rSumOfErrorCount[8:0]
+     2/2: $0\rErrorCountOut[17:0]
+     1/10: $0\rPageErrorInfo[327:0] [327:325]
+     2/10: $0\rPageErrorInfo[327:0] [263:0]
+     3/10: $0\rPageErrorInfo[327:0] [295:264]
+     4/10: $0\rPageErrorInfo[327:0] [305:296]
+     5/10: $0\rPageErrorInfo[327:0] [311:306]
+     6/10: $0\rPageErrorInfo[327:0] [317:312]
+     7/10: $0\rPageErrorInfo[327:0] [319:318]
+     8/10: $0\rPageErrorInfo[327:0] [320]
+     9/10: $0\rPageErrorInfo[327:0] [323:321]
+    10/10: $0\rPageErrorInfo[327:0] [324]
+     1/1: $0\rTotalErrorCount[9:0]
+     1/1: $0\rWorstCaseErrorCount[5:0]
+     1/2: $0\rChunkErrorCount[263:0] [263:8]
+     2/2: $0\rChunkErrorCount[263:0] [7:0]
+Creating register for signal `\d_BCH_SC_top.\o_error_detected' using process `\d_BCH_SC_top.$proc$/openlane/designs/sccs_bch/src/d_BCH_SC_top.v:354$580'.
+Creating register for signal `$paramod$3c3b88ab9b22fd823e3bb97acbe117a0445f327a\BCHDecoderX.\rErrorCountOut' using process `$paramod$3c3b88ab9b22fd823e3bb97acbe117a0445f327a\BCHDecoderX.$proc$/openlane/designs/sccs_bch/src/BCHDecoderX.v:233$219'.
+Creating register for signal `$paramod$3c3b88ab9b22fd823e3bb97acbe117a0445f327a\BCHDecoderX.\rSumOfErrorCount' using process `$paramod$3c3b88ab9b22fd823e3bb97acbe117a0445f327a\BCHDecoderX.$proc$/openlane/designs/sccs_bch/src/BCHDecoderX.v:233$219'.
+Creating register for signal `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.\rPageErrorInfo' using process `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.$proc$/openlane/designs/sccs_bch/src/BCHDecoderOutputControl.v:496$201'.
+Creating register for signal `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.\rTotalErrorCount' using process `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.$proc$/openlane/designs/sccs_bch/src/BCHDecoderOutputControl.v:484$197'.
+Creating register for signal `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.\rWorstCaseErrorCount' using process `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.$proc$/openlane/designs/sccs_bch/src/BCHDecoderOutputControl.v:472$192'.
+Creating register for signal `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.\rChunkErrorCount' using process `$paramod$3c019e5eae372aedc253186e32a06f04a017c265\BCHDecoderOutputControl.$proc$/openlane/designs/sccs_bch/src/BCHDecoderOutputControl.v:456$188'.
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procdff$11514 ($dff) from module BCHSCCS (D = { $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10833_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10843_Y }, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rChunkErrorCount, rval = 264'000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$13061 ($sdff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10843_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rChunkErrorCount [7:0]).
+Adding EN signal on $auto$ff.cc:266:slice$13061 ($sdff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10833_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rChunkErrorCount [263:8]).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procdff$11513 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10823_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rWorstCaseErrorCount, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:266:slice$13082 ($sdff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10823_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rWorstCaseErrorCount).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procdff$11512 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10813_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rTotalErrorCount, rval = 10'0000000000).
+Adding EN signal on $auto$ff.cc:266:slice$13092 ($sdff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10813_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rTotalErrorCount).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procdff$11511 ($dff) from module BCHSCCS (D = { $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10737_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10805_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10798_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10790_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10783_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10775_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10768_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10760_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10752_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10744_Y }, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo, rval = 328'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$13102 ($sdff) from module BCHSCCS (D = { \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [295:293] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [291:289] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [287:286] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [279:274] }, Q = { \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [327:325] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [323:321] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [319:318] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [311:306] }).
+Adding EN signal on $auto$ff.cc:266:slice$13102 ($sdff) from module BCHSCCS (D = { $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10805_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10790_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10775_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10760_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10752_Y $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderOutControlCore.$procmux$10744_Y }, Q = { \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [324] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [320] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [317:312] \Inst_BCHDecoderControl.Inst_BCHDecoderOutControlCore.rPageErrorInfo [305:0] }).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.\Inst_BCHPDecoder.\PageDecoderSC_X.\genblk1[1].d_clustered_SC.$procdff$11399 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.\Inst_BCHPDecoder.\PageDecoderSC_X.\genblk1[1].d_clustered_SC.$or$/openlane/designs/sccs_bch/src/d_BCH_SC_top.v:393$608_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[1].d_clustered_SC.o_error_detected, rval = 1'0).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.\Inst_BCHPDecoder.\PageDecoderSC_X.\genblk1[0].d_clustered_SC.$procdff$11399 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.\Inst_BCHPDecoder.\PageDecoderSC_X.\genblk1[0].d_clustered_SC.$or$/openlane/designs/sccs_bch/src/d_BCH_SC_top.v:393$608_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[0].d_clustered_SC.o_error_detected, rval = 1'0).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.$procdff$11509 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.$procmux$10665_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.rSumOfErrorCount, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:266:slice$13549 ($sdff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.$add$/openlane/designs/sccs_bch/src/BCHDecoderX.v:244$220_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.rSumOfErrorCount).
+Adding SRST signal on $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.$procdff$11508 ($dff) from module BCHSCCS (D = $flatten\Inst_BCHDecoderControl.\Inst_BCHDecoderIO.$procmux$10673_Y, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.rErrorCountOut, rval = 18'000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$13553 ($sdff) from module BCHSCCS (D = \iErrorCount, Q = \Inst_BCHDecoderControl.Inst_BCHDecoderIO.rErrorCountOut).
+ABC: Error: The network is combinational.
+Add BCHSCCS/$auto$insbuf.cc:97:execute$524179: \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[0].d_clustered_SC.o_error_detected -> \oDecodeNeeded [0]
+Add BCHSCCS/$auto$insbuf.cc:97:execute$524180: \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[1].d_clustered_SC.o_error_detected -> \oDecodeNeeded [1]
+Add BCHSCCS/$auto$insbuf.cc:97:execute$524181: \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[0].d_clustered_SC.o_sc_cmplt -> \oErrorDetectionEnd [0]
+Add BCHSCCS/$auto$insbuf.cc:97:execute$524182: \Inst_BCHDecoderControl.Inst_BCHDecoderIO.Inst_BCHPDecoder.PageDecoderSC_X.genblk1[1].d_clustered_SC.o_sc_cmplt -> \oErrorDetectionEnd [1]

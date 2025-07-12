@@ -1,0 +1,102 @@
+Sat Jul 12 09:35:56 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/layers.list /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Sat Jul 12 09:35:56 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/merged.nom.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 09:35:56 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/merged.min.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 09:35:56 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/merged.max.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 09:35:57 +0000 2025 - Executing "{python3 /openlane/scripts/mergeLib.py --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/merged.lib --name sky130A_merged /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jul 12 09:35:57 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/trimmed.lib /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/merged.lib}"
+
+Sat Jul 12 09:35:57 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts.lib.exclude.list --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jul 12 09:35:57 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts-fastest.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Sat Jul 12 09:35:58 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/cts/cts-slowest.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "{python3 /openlane/scripts/new_tracks.py -i /data-ssd/home/zihanxu/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/routing/config.tracks}"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "{echo {OpenLane c924ddae52c92d51c587ce4c4f06b4a0efd4f4ac} > /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/OPENLANE_COMMIT}"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib}"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/trimmed.lib > /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/synthesis/1-synthesis.log"
+
+Sat Jul 12 09:35:59 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/synthesis/1-synthesis.log}"
+
+Sat Jul 12 09:43:23 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/t4nfc\/runs\/RUN_2025.07.12_09.35.54\/results\/synthesis\/FMCTop.v/} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/config.tcl}"
+
+Sat Jul 12 09:43:23 +0000 2025 - Executing "{sed -i.bak /defparam/d /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/results/synthesis/FMCTop.v}"
+
+Sat Jul 12 09:43:26 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/synthesis/2-sta.log"
+
+Sat Jul 12 09:43:26 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/synthesis/2-sta.log}"
+
+Sat Jul 12 09:43:47 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/3-initial_fp.log"
+
+Sat Jul 12 09:43:47 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/3-initial_fp.log}"
+
+Sat Jul 12 09:43:54 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/dimensions.txt --input-lef /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/merged.nom.lef /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/floorplan/3-initial_fp.def}"
+
+Sat Jul 12 09:43:57 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/io_place.py --config /openlane/designs/t4nfc/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension 0 --ver-extension 0 --length 4 --unmatched-error --input-lef /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/merged.nom.lef --output-def /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/floorplan/4-io.def --output /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/floorplan/4-io.odb /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/tmp/floorplan/3-initial_fp.odb |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/4-place_io.log}"
+
+Sat Jul 12 09:44:00 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/5-tap.log"
+
+Sat Jul 12 09:44:01 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/5-tap.log}"
+
+Sat Jul 12 09:44:07 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/6-pdn.log"
+
+Sat Jul 12 09:44:07 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/floorplan/6-pdn.log}"
+
+Sat Jul 12 09:44:26 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/6-global.log"
+
+Sat Jul 12 09:44:26 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/6-global.log}"
+
+Sat Jul 12 09:54:31 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/t4nfc\/runs\/RUN_2025.07.12_09.35.54\/tmp\/placement\/7-global.nl.v/} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/config.tcl}"
+
+Sat Jul 12 09:54:31 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/8-gpl_sta.log"
+
+Sat Jul 12 09:54:31 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/8-gpl_sta.log}"
+
+Sat Jul 12 09:55:26 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/9-resizer.log"
+
+Sat Jul 12 09:55:26 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/9-resizer.log}"
+
+Sat Jul 12 09:57:10 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/t4nfc\/runs\/RUN_2025.07.12_09.35.54\/tmp\/placement\/9-resizer.nl.v/} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/config.tcl}"
+
+Sat Jul 12 09:57:10 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/10-detailed.log"
+
+Sat Jul 12 09:57:10 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/10-detailed.log}"
+
+Sat Jul 12 09:57:19 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/t4nfc\/runs\/RUN_2025.07.12_09.35.54\/results\/placement\/FMCTop.nl.v/} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/config.tcl}"
+
+Sat Jul 12 09:57:20 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/11-dpl_sta.log"
+
+Sat Jul 12 09:57:20 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/placement/11-dpl_sta.log}"
+
+Sat Jul 12 09:57:50 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/12-cts.log"
+
+Sat Jul 12 09:57:50 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/12-cts.log}"
+
+Sat Jul 12 09:59:14 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/13-cts_sta.log"
+
+Sat Jul 12 09:59:14 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/13-cts_sta.log}"
+
+Sat Jul 12 10:00:02 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/14-resizer.log"
+
+Sat Jul 12 10:00:02 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/cts/14-resizer.log}"
+
+Sat Jul 12 10:07:45 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/t4nfc\/runs\/RUN_2025.07.12_09.35.54\/tmp\/cts\/14-FMCTop.resized.nl.v/} /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/config.tcl}"
+
+Sat Jul 12 10:07:46 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/routing/15-resizer_design.log"
+
+Sat Jul 12 10:07:46 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/logs/routing/15-resizer_design.log}"
+
+Sat Jul 12 16:36:49 +0000 2025 - Executing "{python3 /openlane/scripts/write_runtime.py --conclude --seconds --time-in 1752338209 {flow failed}}"
+
+Sat Jul 12 16:36:50 +0000 2025 - Executing "{python3 /openlane/scripts/generate_reports.py -d /openlane/designs/t4nfc --design_name FMCTop --tag RUN_2025.07.12_09.35.54 --output_file /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/reports/metrics.csv --man_report /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54/reports/manufacturability.rpt --run_path /openlane/designs/t4nfc/runs/RUN_2025.07.12_09.35.54}"
+

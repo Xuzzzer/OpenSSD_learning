@@ -1,0 +1,28 @@
+
+89. Printing statistics.
+
+=== NFC_Toggle_Top_DDR100 ===
+
+   Number of wires:             513665
+   Number of wire bits:         728030
+   Number of public wires:       16645
+   Number of public wire bits:  230799
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             727438
+     $_ANDNOT_                   17573
+     $_AND_                        132
+     $_MUX_                     459559
+     $_NAND_                       252
+     $_NOR_                        294
+     $_NOT_                        737
+     $_ORNOT_                      397
+     $_OR_                       18083
+     $_XNOR_                        60
+     $_XOR_                        173
+     sky130_fd_sc_hd__dfrtp_2      578
+     sky130_fd_sc_hd__dfstp_2       30
+     sky130_fd_sc_hd__dfxtp_2   229560
+     sky130_fd_sc_hd__ebufn_2       10
+

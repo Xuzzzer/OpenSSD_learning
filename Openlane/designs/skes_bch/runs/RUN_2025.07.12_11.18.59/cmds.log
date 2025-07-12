@@ -1,0 +1,106 @@
+Sat Jul 12 11:19:00 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/layers.list /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Sat Jul 12 11:19:00 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/merged.nom.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 11:19:00 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/merged.min.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 11:19:01 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/merged.max.lef -i /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jul 12 11:19:01 +0000 2025 - Executing "{python3 /openlane/scripts/mergeLib.py --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/merged.lib --name sky130A_merged /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jul 12 11:19:01 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/trimmed.lib /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/merged.lib}"
+
+Sat Jul 12 11:19:01 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts.lib.exclude.list --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jul 12 11:19:02 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts-fastest.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Sat Jul 12 11:19:02 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/cts/cts-slowest.lib /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Sat Jul 12 11:19:03 +0000 2025 - Executing "{python3 /openlane/scripts/new_tracks.py -i /data-ssd/home/zihanxu/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/routing/config.tracks}"
+
+Sat Jul 12 11:19:03 +0000 2025 - Executing "{echo {OpenLane c924ddae52c92d51c587ce4c4f06b4a0efd4f4ac} > /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/OPENLANE_COMMIT}"
+
+Sat Jul 12 11:19:03 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/blackbox.tcl}"
+
+Sat Jul 12 11:19:03 +0000 2025 - Executing "{verilator -Wall --lint-only --Wno-DECLFILENAME --top-module SharedKESTop /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/blackbox/sky130_fd_sc_hd__blackbox.v /openlane/designs/skes_bch/src/d_KES_PE_DC_2MAXodr.v /openlane/designs/skes_bch/src/d_KES_PE_ELU_sMINodr.v /openlane/designs/skes_bch/src/d_partial_FFM_gate_6b.v /openlane/designs/skes_bch/src/d_KES_PE_ELU_MINodr.v /openlane/designs/skes_bch/src/d_KES_CS_buffer.v /openlane/designs/skes_bch/src/ChannelArbiter.v /openlane/designs/skes_bch/src/d_parallel_FFM_gate_GF12.v /openlane/designs/skes_bch/src/InterChannelELPBuffer.v /openlane/designs/skes_bch/src/d_KES_top.v /openlane/designs/skes_bch/src/d_KES_PE_ELU_eMAXodr.v /openlane/designs/skes_bch/src/InterChannelSyndromeBuffer.v /openlane/designs/skes_bch/src/SharedKESTop.v /openlane/designs/skes_bch/src/d_KES_PE_DC_NMLodr.v /openlane/designs/skes_bch/src/d_SC_KES_buffer.v /openlane/designs/skes_bch/src/d_KES_PE_ELU_NMLodr.v -Wno-fatal --relative-includes |& tee /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/synthesis/linter.log /dev/null}"
+
+Sat Jul 12 11:19:04 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /data-ssd/home/zihanxu/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib}"
+
+Sat Jul 12 11:19:04 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/trimmed.lib > /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Sat Jul 12 11:19:05 +0000 2025 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/synthesis/1-synthesis.log"
+
+Sat Jul 12 11:19:05 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/synthesis/1-synthesis.log}"
+
+Sat Jul 12 11:22:19 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/skes_bch\/runs\/RUN_2025.07.12_11.18.59\/results\/synthesis\/SharedKESTop.v/} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/config.tcl}"
+
+Sat Jul 12 11:22:19 +0000 2025 - Executing "{sed -i.bak /defparam/d /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/results/synthesis/SharedKESTop.v}"
+
+Sat Jul 12 11:22:20 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/synthesis/2-sta.log"
+
+Sat Jul 12 11:22:20 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/synthesis/2-sta.log}"
+
+Sat Jul 12 11:22:27 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/3-initial_fp.log"
+
+Sat Jul 12 11:22:27 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/3-initial_fp.log}"
+
+Sat Jul 12 11:22:29 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/dimensions.txt --input-lef /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/merged.nom.lef /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/floorplan/3-initial_fp.def}"
+
+Sat Jul 12 11:22:30 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/io_place.py --config /openlane/designs/skes_bch/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension 0 --ver-extension 0 --length 4 --unmatched-error --input-lef /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/merged.nom.lef --output-def /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/floorplan/4-io.def --output /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/floorplan/4-io.odb /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/tmp/floorplan/3-initial_fp.odb |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/4-place_io.log}"
+
+Sat Jul 12 11:22:32 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/5-tap.log"
+
+Sat Jul 12 11:22:32 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/5-tap.log}"
+
+Sat Jul 12 11:22:34 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/6-pdn.log"
+
+Sat Jul 12 11:22:34 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/floorplan/6-pdn.log}"
+
+Sat Jul 12 11:22:39 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/6-global.log"
+
+Sat Jul 12 11:22:39 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/6-global.log}"
+
+Sat Jul 12 11:24:26 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/skes_bch\/runs\/RUN_2025.07.12_11.18.59\/tmp\/placement\/7-global.nl.v/} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/config.tcl}"
+
+Sat Jul 12 11:24:26 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/8-gpl_sta.log"
+
+Sat Jul 12 11:24:26 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/8-gpl_sta.log}"
+
+Sat Jul 12 11:24:38 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/9-resizer.log"
+
+Sat Jul 12 11:24:38 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/9-resizer.log}"
+
+Sat Jul 12 11:25:07 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/skes_bch\/runs\/RUN_2025.07.12_11.18.59\/tmp\/placement\/9-resizer.nl.v/} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/config.tcl}"
+
+Sat Jul 12 11:25:07 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/10-detailed.log"
+
+Sat Jul 12 11:25:07 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/10-detailed.log}"
+
+Sat Jul 12 11:25:11 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/skes_bch\/runs\/RUN_2025.07.12_11.18.59\/results\/placement\/SharedKESTop.nl.v/} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/config.tcl}"
+
+Sat Jul 12 11:25:11 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/11-dpl_sta.log"
+
+Sat Jul 12 11:25:11 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/placement/11-dpl_sta.log}"
+
+Sat Jul 12 11:25:22 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/12-cts.log"
+
+Sat Jul 12 11:25:22 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/12-cts.log}"
+
+Sat Jul 12 11:25:48 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/13-cts_sta.log"
+
+Sat Jul 12 11:25:48 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/13-cts_sta.log}"
+
+Sat Jul 12 11:26:03 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/14-resizer.log"
+
+Sat Jul 12 11:26:03 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/cts/14-resizer.log}"
+
+Sat Jul 12 11:47:50 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/skes_bch\/runs\/RUN_2025.07.12_11.18.59\/tmp\/cts\/14-SharedKESTop.resized.nl.v/} /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/config.tcl}"
+
+Sat Jul 12 11:47:51 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/routing/15-resizer_design.log"
+
+Sat Jul 12 11:47:51 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/logs/routing/15-resizer_design.log}"
+
+Sat Jul 12 11:55:55 +0000 2025 - Executing "{python3 /openlane/scripts/write_runtime.py --conclude --seconds --time-in 1752321355 {flow failed}}"
+
+Sat Jul 12 11:55:55 +0000 2025 - Executing "{python3 /openlane/scripts/generate_reports.py -d /openlane/designs/skes_bch --design_name SharedKESTop --tag RUN_2025.07.12_11.18.59 --output_file /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/reports/metrics.csv --man_report /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59/reports/manufacturability.rpt --run_path /openlane/designs/skes_bch/runs/RUN_2025.07.12_11.18.59}"
+

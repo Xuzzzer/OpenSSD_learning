@@ -1,0 +1,2 @@
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: Warning: The choice nodes in the original AIG are removed by strashing.

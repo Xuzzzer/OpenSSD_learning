@@ -1,0 +1,36 @@
+
+83. Printing statistics.
+
+=== NFC_Toggle_Top_DDR100 ===
+
+   Number of wires:             283076
+   Number of wire bits:         497441
+   Number of public wires:       16645
+   Number of public wire bits:  230799
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             496879
+     $_ANDNOT_                   17573
+     $_AND_                        132
+     $_DFFE_PP0N_                   24
+     $_DFFE_PP0P_                  324
+     $_DFFE_PP1P_                   25
+     $_DFFE_PP_                 229404
+     $_DFF_N_                        8
+     $_DFF_PP0_                    230
+     $_DFF_PP1_                      5
+     $_DFF_P_                       56
+     $_MUX_                     229626
+     $_NAND_                       252
+     $_NOR_                        294
+     $_NOT_                        111
+     $_ORNOT_                      397
+     $_OR_                       18083
+     $_SDFFE_PP0P_                  64
+     $_SDFF_PP0_                    26
+     $_SDFF_PP1_                     2
+     $_TBUF_                        10
+     $_XNOR_                        60
+     $_XOR_                        173
+
