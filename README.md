@@ -22,3 +22,5 @@
         }
     },
 }
+all是整合文件，通过将designs文件放置在主目录下即可。```make mount
+./flow.tcl -deisgn all```即可复制执行全流程
