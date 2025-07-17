@@ -47,7 +47,6 @@ http://www.hanyang.ac.kr/
 ----------------------------------------------------------------------------------
 */
 
-//00h ~ 07h, Controller Capabilities, CAP
 //DWORD 00
 `define		D_CAP_MQES					16'hFF			//Max queue entries: 256
 `define		D_CAP_CQR					1'h1			//Queues are required to be physically contiguous memory
