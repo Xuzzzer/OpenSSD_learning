@@ -1,12 +1,5 @@
 
 
-// * v1.0.1
-//   - state machine: minor change
-//
-// * v1.0.0
-//   - first draft
-//////////////////////////////////////////////////////////////////////////////////
-
 `include "d_CS_parameters.vh"
 `timescale 1ns / 1ps
 

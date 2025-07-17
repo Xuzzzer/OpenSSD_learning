@@ -1,0 +1,24 @@
+import glob
+
+for filename in glob.glob("*.v"):
+    with open(filename, "r") as f:
+        lines = f.readlines()
+
+    # 只查找前50行
+    max_search = 50
+    start_idx = end_idx = None
+    for i in range(min(max_search, len(lines))):
+        if start_idx is None and "/*" in lines[i]:
+            start_idx = i
+        if start_idx is not None and "*/" in lines[i]:
+            end_idx = i
+            break
+
+    # 如果找到了完整的注释块，则删除
+    if start_idx is not None and end_idx is not None:
+        new_lines = lines[:start_idx] + lines[end_idx+1:]
+        with open(filename, "w") as f:
+            f.writelines(new_lines)
+        print(f"Removed block comment in {filename}")
+    else:
+        print(f"No block comment found in first {max_search} lines of {filename}")

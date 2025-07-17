@@ -1,14 +1,4 @@
 
-
-// * v2.0.0
-//   - based on partial multiplication
-//   - fixed GF
-//
-// * v1.0.0
-//   - based on LFSR
-//   - variable GF by parameter setting
-//////////////////////////////////////////////////////////////////////////////////
-
 `timescale 1ns / 1ps
 
 module d_parallel_FFM_gate_GF12

@@ -1,12 +1,4 @@
 
-
-//   - insert additional registers
-//   - improve frequency characteristic
-//
-// * v1.0.0
-//   - first draft
-//////////////////////////////////////////////////////////////////////////////////
-
 `include "d_KES_parameters.vh"
 `timescale 1ns / 1ps
 

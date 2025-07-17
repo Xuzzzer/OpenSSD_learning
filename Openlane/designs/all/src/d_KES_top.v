@@ -1,19 +1,5 @@
 
 
-//   - minor modification for releasing
-//
-// * v1.1.1
-//   - bug fix: state machine
-//
-// * v1.1.0
-//   - change state machine: divide states
-//   - insert additional registers
-//   - improve frequency characteristic
-//
-// * v1.0.0
-//   - first draft
-//   - KES: binary version of inversion-less Berlekamp-Massey algorithm (iBM.b)
-//////////////////////////////////////////////////////////////////////////////////
 
 `include "d_KES_parameters.vh"
 `timescale 1ns / 1ps
