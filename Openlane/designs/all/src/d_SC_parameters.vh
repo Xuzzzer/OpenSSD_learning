@@ -1,8 +1,5 @@
 
 
-// * v1.0.0
-//   - first draft
-//////////////////////////////////////////////////////////////////////////////////
 
 `define D_SC_GF_ORDER 12 // Galois field order, GF(2^12)
 `define D_SC_ECC_T 14 // error correction capability t = 14
