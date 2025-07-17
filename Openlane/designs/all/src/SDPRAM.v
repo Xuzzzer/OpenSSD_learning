@@ -9,11 +9,9 @@ module NFCV2_Simple_Dual_Port_RAM
 (
 
     input                               clk,
-    //Write Port        
     input                               ena,    
     input  [ADDR_A_WIDTH-1:0]           addra,  
     input  [WRITE_DATA_WIDTH_A-1:0]     dina,   
-    //Read Port
     input                               enb,    
     input  [ADDR_B_WIDTH-1:0]           addrb,  
     output reg [READ_DATA_WIDTH_B-1:0]  doutb   

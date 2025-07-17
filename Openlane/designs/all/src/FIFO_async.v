@@ -46,7 +46,6 @@ ClkSyncModule ClkSyncModule
 endmodule
 
 module WriteModule
-//声明写地址位数
 #(parameter ADDRSIZE = 7)
 //根据结构框图，声明输入和输出变量
 (

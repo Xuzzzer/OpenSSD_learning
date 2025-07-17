@@ -1,6 +1,5 @@
 module A_TOP
 #(
-    //nfcv2
     parameter IDelayValue           =   0   ,
     parameter DQIDelayValue         =   0   ,
     parameter InputClockBufferType  =   0   ,
@@ -8,15 +7,12 @@ module A_TOP
     parameter BufferType            =   0   ,
     parameter IDelayCtrlInst        =   1   ,
     parameter DQIDelayInst          =   0   ,
-    //nfct4
     parameter   NumberOfWays        = 8     ,
-    //sccs_bch
     parameter   BCHDecMulti         = 2     ,
     parameter   GaloisFieldDegree   = 12    ,
     parameter   MaxErrorCountBits   = 9     ,
     parameter   Syndromes           = 27   	,
     parameter   ELPCoefficients     = 15    ,
-    //skes_bch
      parameter   Channel             = 4,
     parameter   Multi               = 2,
     parameter   GaloisFieldDegree   = 12,
@@ -24,7 +20,6 @@ module A_TOP
     parameter   Syndromes           = 27,
     parameter   ELPCoefficients     = 15,
 
-    //nvme
     parameter C_S0_AXI_ADDR_WIDTH			= 32,
 	parameter C_S0_AXI_DATA_WIDTH			= 32,
 	parameter C_S0_AXI_BASEADDR				= 32'hA0000000,

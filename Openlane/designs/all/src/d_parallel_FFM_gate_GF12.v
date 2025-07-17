@@ -1,53 +1,5 @@
-//////////////////////////////////////////////////////////////////////////////////
-// d_parallel_FFM_gate_GF12.v for Cosmos OpenSSD
-// Copyright (c) 2015 Hanyang University ENC Lab.
-// Contributed by Jinwoo Jeong <jwjeong@enc.hanyang.ac.kr>
-//                Ilyong Jung <iyjung@enc.hanyang.ac.kr>
-//                Yong Ho Song <yhsong@enc.hanyang.ac.kr>
-//
-// This file is part of Cosmos OpenSSD.
-//
-// Cosmos OpenSSD is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 3, or (at your option)
-// any later version.
-//
-// Cosmos OpenSSD is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-// See the GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Cosmos OpenSSD; see the file COPYING.
-// If not, see <http://www.gnu.org/licenses/>. 
-//////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: ENC Lab. <http://enc.hanyang.ac.kr>
-// Engineer: Jinwoo Jeong <jwjeong@enc.hanyang.ac.kr>
-//           Ilyong Jung <iyjung@enc.hanyang.ac.kr>
-// 
-// Project Name: Cosmos OpenSSD
-// Design Name: BCH Page Decoder
-// Module Name: d_parallel_FFM_gate_GF12
-// File Name: d_parallel_FFM_gate_GF12.v
-//
-// Version: v2.0.2-GF12tB
-//
-// Description: 
-//   - parallel Finite Field Multiplier (FFM) module
-//   - 2 polynomial form input, 1 polynomial form output
-//////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////////
-// Revision History:
-//
-// * v2.0.2
-//   - minor modification for releasing
-//
-// * v2.0.1
-//   - re-factoring
-//
 // * v2.0.0
 //   - based on partial multiplication
 //   - fixed GF

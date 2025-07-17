@@ -44,8 +44,6 @@ module s_axi_nvme # (
 	parameter P_SLOT_WIDTH					=1024 //slot_modified
 )
 (
-////////////////////////////////////////////////////////////////
-//AXI4-lite slave interface signals
 	input									s0_axi_aclk,
 	input									s0_axi_aresetn,
 

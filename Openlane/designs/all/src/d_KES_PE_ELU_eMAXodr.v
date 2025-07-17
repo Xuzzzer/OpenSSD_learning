@@ -1,53 +1,5 @@
-//////////////////////////////////////////////////////////////////////////////////
-// d_KES_PE_ELU_eMAXodr.v for Cosmos OpenSSD
-// Copyright (c) 2015 Hanyang University ENC Lab.
-// Contributed by Jinwoo Jeong <jwjeong@enc.hanyang.ac.kr>
-//                Ilyong Jung <iyjung@enc.hanyang.ac.kr>
-//                Yong Ho Song <yhsong@enc.hanyang.ac.kr>
-//
-// This file is part of Cosmos OpenSSD.
-//
-// Cosmos OpenSSD is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 3, or (at your option)
-// any later version.
-//
-// Cosmos OpenSSD is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-// See the GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Cosmos OpenSSD; see the file COPYING.
-// If not, see <http://www.gnu.org/licenses/>. 
-//////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: ENC Lab. <http://enc.hanyang.ac.kr>
-// Engineer: Jinwoo Jeong <jwjeong@enc.hanyang.ac.kr>
-//           Ilyong Jung <iyjung@enc.hanyang.ac.kr>
-// 
-// Project Name: Cosmos OpenSSD
-// Design Name: BCH Page Decoder
-// Module Name: d_KES_PE_ELU_eMAXodr
-// File Name: d_KES_PE_ELU_eMAXodr.v
-//
-// Version: v1.1.1-256B_T14
-//
-// Description: 
-//   - Processing Element: Error Locator Update module, maximum order + 1 (extended)
-//   - for binary version of inversion-less Berlekamp-Massey algorithm (iBM.b)
-//   - for data area
-//////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////////
-// Revision History:
-//
-// * v1.1.1
-//   - minor modification for releasing
-//
-// * v1.1.0
-//   - change state machine: divide states
 //   - insert additional registers
 //   - improve frequency characteristic
 //

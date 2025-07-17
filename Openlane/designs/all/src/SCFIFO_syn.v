@@ -1,4 +1,3 @@
-// fifo_sync.v
 module SCFIFO_sync
 #(
     parameter DATA_WIDTH = 64, 
@@ -19,7 +18,6 @@ module SCFIFO_sync
     output                      rd_empty,
     output [$clog2(FIFO_DEPTH):0]   data_count 
 );
-//ADDR_WIDTH=6,FIFO_DEPTH=64, fifo_mem=6*64
 
 
     localparam ADDR_WIDTH = $clog2(FIFO_DEPTH); 

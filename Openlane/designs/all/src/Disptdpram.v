@@ -15,17 +15,13 @@ module tdpram_32x1024 (
     output reg  [31:0]  doutb
 );
 
-    // Internal memory
     reg [31:0] mem [0:1023];
 
-    // Output registers (for READ_LATENCY = 1)
     reg [31:0] read_data_a;
     reg [31:0] read_data_b;
 
-    // Port A
     always @(posedge clk) begin
         if (en_a) begin
-            // Write operation
             if (|wea) begin
                 mem[addra] <= dina;
                 read_data_a <= dina; // write_first behavior
@@ -34,14 +30,12 @@ module tdpram_32x1024 (
             end
         end
 
-        // Output register
         if (rst_a)
             douta <= 32'h0; // READ_RESET_VALUE_A = "0"
         else
             douta <= read_data_a;
     end
 
-    // Port B
     always @(posedge clk) begin
         if (en_b) begin
             if (|web) begin
